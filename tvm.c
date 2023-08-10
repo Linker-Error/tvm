@@ -834,7 +834,6 @@ int main(int argc, char *argv[])
     RunProgram();
     printf("\nProgram Ended.\n");
     debug();
-    printf("%llu %llu %llu", Program[0], Program[1], Program[2]);
 
     free(Program);
     free(RAM);
