@@ -250,9 +250,7 @@ void LoadProgram ()
             CurrentWrite[0] = CurrentWrite[0] << 8; // Bit Shift to left to make way for next-most significant byte in every iteration (For little-endian cpus)
             fread(CurrentByte, sizeof(uint8_t), 1, ProgramFile); // Read a byte from program file
             CurrentWrite[0] += CurrentByte[0];
-            printf("\n%d", j);
         }
-        printf("\nRead: %llu", CurrentWrite[0]);
 
         Program[i] = CurrentWrite[0];
         CurrentWrite[0] = 0;
