@@ -439,6 +439,7 @@ void ExecOpcode(enum opcode opcode, uint64_t arg)
         break;
     case GETS: // Get string and load into input buffer
         bfgets(Input, 1000);
+        inptr = &Input;
         break;
     case INPX: // Load next char in input buffer to X
         XREG = NextChar();
@@ -835,5 +836,6 @@ int main(int argc, char *argv[])
 
     free(Program);
     free(RAM);
+    fclose(ProgramFile);
     return 0;
 }
