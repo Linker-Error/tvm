@@ -9,7 +9,7 @@ For example, there are no instructions to calculate X - A or B - Y. There are on
 The bias register is added to or subtracted from the argument of an opcode (if there is one) based on the value of the NP system flag. (This will be covered later in the passage.)
 ### System and Program Flags
 The one system flag in use is the NP or Negative/Positive flag and is used to determine whether the bias shall be added or subtracted from the argument of an opcode. 
-It is also used to decide if addition or subtraction should be done, as they do not have seperate instructions. All of the 64 program flags can only be modified by the program and to not have any individual purposes (other than any the programmer decides to give them). 
+It is also used to decide if addition or subtraction should be done, as they do not have seperate instructions. All of the 64 program flags can only be modified by the program and do not have any individual purposes (other than any the programmer decides to give them). 
 Program flags can be modified by sets of instructions that will turn them on or off based on a specific condition (for example x == y). They can also be modified with AND, OR, and NOT gates.
 This is meant to be a hacky way to have more complex conditionals. Jump instructions can then be performed if a specific flag is 1 or if a specific flag is 0.
 ### Input Buffer
